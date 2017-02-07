@@ -6,9 +6,8 @@ def prime_numbers(number):
 
     prime_nos = []
 
-    """Return True if *number* is prime."""
     if number in (0, 1):
-        return False
+        return "Zero and One are not prime numbers"
 
     if number < 2:
         return "Not possible to generate prime numbers for integers less than 2."

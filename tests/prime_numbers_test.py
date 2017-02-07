@@ -38,7 +38,7 @@ class TestPrimeGenerator(unittest.TestCase):
     def test_one(self):
         """"Testing if one is correctly determined not to be prime."""
 
-        self.assertFalse(prime_numbers(1), "One is not a prime number")
+        self.assertEqual(prime_numbers(1), "One is not a prime number")
 
     def test_two(self):
         """Testing if error returned if integer entered is 2."""
@@ -48,7 +48,7 @@ class TestPrimeGenerator(unittest.TestCase):
     def test_zero(self):
         """Testing if zero is correctly determined not to be prime."""
 
-        self.assertFalse(prime_numbers(0), "Zero is not a prime number")
+        self.assertEqual(prime_numbers(0), "Zero is not a prime number")
 
     def test_invalid_type(self):
         """Testing if error returned if input not integer."""
