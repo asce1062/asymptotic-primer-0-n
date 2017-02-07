@@ -35,25 +35,35 @@ class TestPrimeGenerator(unittest.TestCase):
                           97, 101, 103, 107, 109, 113,
                           127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199])
 
+    def test_zero(self):
+        """Testing if zero is correctly determined not to be prime."""
+
+        self.assertEqual(prime_numbers(0), "Zero or One cannot be prime numbers.")
+
     def test_one(self):
         """"Testing if one is correctly determined not to be prime."""
 
-        self.assertEqual(prime_numbers(1), "One is not a prime number")
+        self.assertEqual(prime_numbers(1), "Zero or One cannot be prime numbers.")
 
     def test_two(self):
         """Testing if error returned if integer entered is 2."""
 
         self.assertEqual(prime_numbers(2), [2])
 
-    def test_zero(self):
-        """Testing if zero is correctly determined not to be prime."""
-
-        self.assertEqual(prime_numbers(0), "Zero is not a prime number")
-
-    def test_invalid_type(self):
+    def test_invalid_type_string(self):
         """Testing if error returned if input not integer."""
 
         self.assertEqual(prime_numbers("String"), "Only integers are allowed.")
+
+    def test_invalid_type_string_list(self):
+        """Testing if error returned if input not integer."""
+
+        self.assertEqual(prime_numbers([]), "Only integers are allowed.")
+
+    def test_invalid_type_string_set(self):
+        """Testing if error returned if input not integer."""
+
+        self.assertEqual(prime_numbers(set()), "Only integers are allowed.")
 
     def test_only_positive(self):
         """Testing if error returned if negative integers input."""

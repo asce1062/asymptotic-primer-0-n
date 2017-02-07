@@ -7,7 +7,7 @@ def prime_numbers(number):
     prime_nos = []
 
     if number in (0, 1):
-        return "Zero and One are not prime numbers"
+        return "Zero or One cannot be prime numbers."
 
     if number < 2:
         return "Not possible to generate prime numbers for integers less than 2."
