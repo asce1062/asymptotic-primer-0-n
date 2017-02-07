@@ -60,11 +60,6 @@ class TestPrimeGenerator(unittest.TestCase):
 
         self.assertEqual(prime_numbers(-1), "Not possible to generate prime numbers for integers less than 2.")
 
-        # def test_empty_parameter(self):
-        # """Testing if error returned if no input entered."""
-
-        # self.assertEqual(prime_numbers(0), "No number entered.")
-
 
 if __name__ == "__main__":
     unittest.main()
